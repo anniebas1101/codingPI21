@@ -5,8 +5,8 @@ using namespace std;
 
 // Определение структуры (для первого способа)
 struct Goods {
-    double first;  // цена товара (дробное положительное число)
-    int second;    // количество единиц товара (целое положительное число)
+    double first;  //цена товара (дробное положительное число)
+    int second;    //количество единиц товара (целое положительное число)
 
     // Метод инициализации с контролем корректности
     void init(double f, int s) {
@@ -73,7 +73,6 @@ int main() {
     cout << "Стоимость товара: " << product1.cost() << " руб." << endl << endl;
 
     // Способ 2: создание объекта и ввод с клавиатуры
-    cout << "--- Способ 2: ввод данных с клавиатуры ---" << endl;
     Goods product2;
     product2.read();
     cout << endl;
@@ -81,13 +80,11 @@ int main() {
     cout << "Стоимость товара: " << product2.cost() << " руб." << endl << endl;
 
     // Способ 3: создание объекта через внешнюю функцию make_goods()
-    cout << "--- Способ 3: создание через функцию make_goods() ---" << endl;
     Goods product3 = make_goods(299.99, 5);
     product3.display();
     cout << "Стоимость товара: " << product3.cost() << " руб." << endl << endl;
 
     // Способ 4: массив объектов
-    cout << "--- Способ 4: массив объектов ---" << endl;
     const int ARRAY_SIZE = 3;
     Goods products[ARRAY_SIZE];
 
@@ -108,7 +105,6 @@ int main() {
     cout << "Общая стоимость всех товаров: " << totalCost << " руб." << endl << endl;
 
     // Способ 5: динамическое создание объекта
-    cout << "--- Способ 5: динамическое создание объекта ---" << endl;
     Goods* dynamicProduct = new Goods;
     dynamicProduct->init(450.25, 2);
     dynamicProduct->display();
@@ -117,9 +113,7 @@ int main() {
     // Освобождение памяти
     delete dynamicProduct;
 
-    cout << "\nПрограмма завершена. Нажмите Enter для выхода...";
     cin.get();
-    cin.get();  // Дополнительный get() для задержки окна
 
     return 0;
 }
